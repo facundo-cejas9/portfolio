@@ -201,38 +201,20 @@ const { about, skills, projects, contact, language, page, flag } = Astro.props;
 </style>
 
 <script>
-  // Función para guardar el estado del menú hamburguesa en localStorage
-  const saveMenuState = (isActive) => {
-    localStorage.setItem('menuActive', isActive ? 'true' : 'false');
-  };
-
-  // Función para cargar y aplicar el estado del menú hamburguesa desde localStorage
-  const loadMenuState = () => {
-    const isActive = localStorage.getItem('menuActive') === 'true';
-    if (isActive) {
-      hamburgerMenu.classList.add('active');
-      mobile.classList.add('is-active');
-    }
-  };
-
-  const hamburgerMenu = document.querySelector('.hamburguer');
-  const mobile = document.querySelector('.mobile');
-  const closeMenuWithLinks = document.querySelectorAll('.link');
+  const hamburgerMenu = document.querySelector(".hamburguer");
+  const mobile = document.querySelector(".mobile");
+  const closeMenuWithLinks = document.querySelectorAll(".link");
 
   closeMenuWithLinks.forEach((link) => {
-    link.addEventListener('click', function (e) {
-      hamburgerMenu.classList.toggle('active');
-      mobile.classList.toggle('is-active');
-      saveMenuState(hamburgerMenu.classList.contains('active'));
-    });
+  link.addEventListener("click", function (e) {
+    hamburgerMenu.classList.remove("active"); // Remover la clase 'active' del hamburguer
+    mobile.classList.remove("is-active"); // Remover la clase 'is-active' de 'mobile'
   });
+});
 
-  hamburgerMenu.addEventListener('click', function (event) {
-    hamburgerMenu.classList.toggle('active');
-    mobile.classList.toggle('is-active');
-    saveMenuState(hamburgerMenu.classList.contains('active'));
+// Activar/desactivar el menú hamburguesa al hacer clic en el icono del hamburguesa
+hamburgerMenu.addEventListener("click", function (event) {
+  hamburgerMenu.classList.toggle("active");
+  mobile.classList.toggle("is-active");
   });
-
-  // Cargar estado del menú al cargar la página
-  window.addEventListener('load', loadMenuState);
 </script>
