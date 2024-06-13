@@ -57,7 +57,7 @@ const { about, skills, projects, contact, language, page, flag } = Astro.props;
             class="link flex flex-row margin-auto gap-3 items-center text-2xl font-mono text-white "
             href={page}
           >
-            <img class="w-7 h-7" src=`/images/${flag}.png ` />
+            <img alt={`bandera ${flag}`} class="w-7 h-7" src=`/images/${flag}.png ` />
 
             
           </a>
@@ -106,7 +106,7 @@ const { about, skills, projects, contact, language, page, flag } = Astro.props;
           class="gap-5 link items-center flex flex-row margin-auto align-bottom mb-[4rem] text-2xl font-mono text-white py-2"
           href={page}
         >
-          <img class="w-6 h-6" src={`/images/${flag}.png`} />
+          <img alt={`bandera ${flag}`} class="w-6 h-6" src={`/images/${flag}.png`} />
           {language}
         </a>
       </li>
