@@ -201,19 +201,38 @@ const { about, skills, projects, contact, language, page, flag } = Astro.props;
 </style>
 
 <script>
-  const hamburgerMenu = document.querySelector(".hamburguer");
-  const mobile = document.querySelector(".mobile");
-  const closeMenuWithLinks = document.querySelectorAll(".link");
+  // Función para guardar el estado del menú hamburguesa en localStorage
+  const saveMenuState = (isActive) => {
+    localStorage.setItem('menuActive', isActive ? 'true' : 'false');
+  };
+
+  // Función para cargar y aplicar el estado del menú hamburguesa desde localStorage
+  const loadMenuState = () => {
+    const isActive = localStorage.getItem('menuActive') === 'true';
+    if (isActive) {
+      hamburgerMenu.classList.add('active');
+      mobile.classList.add('is-active');
+    }
+  };
+
+  const hamburgerMenu = document.querySelector('.hamburguer');
+  const mobile = document.querySelector('.mobile');
+  const closeMenuWithLinks = document.querySelectorAll('.link');
 
   closeMenuWithLinks.forEach((link) => {
-    link.addEventListener("click", function (e) {
-      hamburgerMenu.classList.toggle("active");
-      mobile.classList.toggle("is-active");
+    link.addEventListener('click', function (e) {
+      hamburgerMenu.classList.toggle('active');
+      mobile.classList.toggle('is-active');
+      saveMenuState(hamburgerMenu.classList.contains('active'));
     });
   });
 
-  hamburgerMenu.addEventListener("click", function (event: any) {
-    hamburgerMenu.classList.toggle("active");
-    mobile.classList.toggle("is-active");
+  hamburgerMenu.addEventListener('click', function (event) {
+    hamburgerMenu.classList.toggle('active');
+    mobile.classList.toggle('is-active');
+    saveMenuState(hamburgerMenu.classList.contains('active'));
   });
+
+  // Cargar estado del menú al cargar la página
+  window.addEventListener('load', loadMenuState);
 </script>
