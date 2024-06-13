@@ -1,0 +1,39 @@
+---
+
+---
+
+<header
+  class="bg-slate-500 py-20 h-screen bg-cover bg-center bg-[url('/images/backgound.jpg')]"
+>
+  <div class="container mx-auto flex justify-start">
+    <h1 class=" leading-[5rem] md:leading-[8rem] text-2xl md:text-4xl font-mono font-bold  text-white mt-[15rem] ml-5 md:ml-[6rem] w-auto">
+      <div id="texto-typewriter" class="w-auto"></div>
+    </h1>
+  </div>
+</header>
+
+
+<script>
+  // Función para mostrar el texto con el efecto de máquina de escribir
+
+  function mostrarTexto(texto, elemento) {
+  let index = 0;
+  const interval = setInterval(() => {
+    if (index < texto.length) {
+      if (texto.charAt(index) === ';') {
+        elemento.innerHTML += '<br>'; // Agregar un salto de línea cuando encuentre una coma
+      } else {
+        elemento.innerHTML += texto.charAt(index);
+      }
+      index++;
+    } else {
+      clearInterval(interval); // Detener el intervalo cuando se completa el texto
+      // Agregar el carácter '|' al final del texto y hacer que parpadee
+     
+    }
+  }, 60); // Velocidad de escritura (en milisegundos)
+}
+
+// Llamar a la función para mostrar el texto con el efecto de máquina de escribir
+mostrarTexto("Hola soy Facundo,; Desarrollador de software y developer.", document.getElementById('texto-typewriter'));
+</script>

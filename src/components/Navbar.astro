@@ -1,0 +1,190 @@
+---
+
+---
+
+<header
+  id="nav"
+  class="border-gray-200 bg-gray-900 fixed w-screen ease-in duration-300"
+>
+  <div
+    class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-8"
+  >
+    <a
+      href="#"
+      class="flex items-center text-2xl sm:text-2xl md:text-4xl font-mono font-semibold"
+    >
+      <span class="text-white"
+        ><span class="text-red-700">F</span>ACUNDO <span class="text-red-700"
+          >C</span
+        >EJAS</span
+      >
+    </a>
+
+    <nav class="hidden lg:block md:hidden pt-3" id="navbar">
+      <ul class="flex flex-col md:flex-row gap-10">
+        <li
+          class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
+        >
+          <a href="#about"> SOBRE MÍ</a>
+        </li>
+        <li
+          class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
+        >
+          <a href="#skills"> HABILIDADES</a>
+        </li>
+        <li
+          class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
+        >
+          <a href="#projects"> PROYECTOS</a>
+        </li>
+        <li
+          class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
+        >
+          <a href="#contact"> CONTACTAME</a>
+        </li>
+      </ul>
+    </nav>
+
+    <div class=" hamburguer">
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <nav class="mobile bg-gray-900">
+    <ul class="p-4 mt-20  transitio ease-in-out duration-300 mr-20">
+      <li>
+        <a
+          href="#about"
+          class="link block margin-auto font-mono text-2xl mb-[4rem] text-center text-white py-2"
+          >SOBRE MÍ</a
+        >
+      </li>
+      <li>
+        <a
+          href="#skills"
+          class="link block font-mono margin-auto text-center mb-[4rem] text-2xl text-white py-2"
+          >HABILIDADES</a
+        >
+      </li>
+      <li>
+        <a
+          href="#projects"
+          class="link block margin-auto text-center mb-[4rem] text-2xl font-mono text-white py-2"
+          >PROYECTOS</a
+        >
+      </li>
+      <li>
+        <a
+          href="#contact"
+          class="link block margin-auto text-center mb-[4rem] text-2xl font-mono text-white py-2"
+          >CONTACTO</a
+        >
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<style>
+  .hamburguer {
+    position: relative;
+    top: 50;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
+
+.hamburguer .bar, .hamburguer:after, .hamburguer:before  {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    margin: 6px 0px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.hamburguer.active:before {
+    transform: rotate(-45deg) translate(-8px, 6px) ;
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px) ;
+    -moz-transform: rotate(-45deg) translate(-8px, 6px) ;
+    -ms-transform: rotate(-45deg) translate(-8px, 6px) ;
+    -o-transform: rotate(-45deg) translate(-8px, 6px) ;
+}
+
+.hamburguer.active:after {
+    transform: rotate(45deg) translate(-9px, -8px) ;
+    -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
+    -moz-transform: rotate(45deg) translate(-9px, -8px) ;
+    -ms-transform: rotate(45deg) translate(-9px, -8px) ;
+    -o-transform: rotate(45deg) translate(-9px, -8px) ;
+}
+
+.hamburguer.active .bar {
+    opacity: 0;
+}
+
+
+.mobile {
+    
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    margin-top: 5rem;
+    z-index: 98;
+    min-height: 100vh;
+    padding-top: 20px;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+
+.mobile.is-active {
+    left: 20%
+}
+
+@media (min-width: 1024px) {
+    .hamburguer {
+        display: none;
+    }
+}
+
+/* Animación para el efecto de máquina de escribir */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+  }
+  
+  
+</style>
+
+<script>
+ 
+
+const hamburgerMenu = document.querySelector(".hamburguer");
+const mobile = document.querySelector(".mobile");
+  const closeMenuWithLinks = document.querySelectorAll(".link");
+
+  closeMenuWithLinks.forEach((link) => {
+    link.addEventListener("click", function (e) {
+      hamburgerMenu.classList.toggle("active");
+      mobile.classList.toggle("is-active");
+    });
+  });
+
+ 
+  hamburgerMenu.addEventListener("click", function (event: any) {
+    hamburgerMenu.classList.toggle("active");
+    mobile.classList.toggle("is-active");
+  });
+</script>
