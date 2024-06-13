@@ -1,10 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import About from "../components/About.astro";
-import Skills from "../components/Skills";
-import Projects from "../components/Projects";
+
 import Contact from "../components/Contact.astro";
 import Navbar from "../components/Navbar.astro";
+import Skills from "../components/Skills.astro";
+import Projects from "../components/Projects.astro";
 ---
 
 <Layout language="es" title="Portfolio Facundo Cejas">
@@ -29,8 +30,9 @@ import Navbar from "../components/Navbar.astro";
           secondParagraph="Mi Experiencia labroal ha sido principalmente enfocada en el desarrollo individual, sin embargo, he tenido una valiosa experiencia trabajando en equipo durante una aceleración específica. Durante esta etapa, participé en una simulación de proyecto donde trabajamos en equipo durante tres meses en la creación de una aplicación.."
           buttonText="DESCARGAR MI CV"
         />
-        <Skills firstLetterofWord="H" lastLetterOfWord='ABILIDADES' />
         <Projects firstLetterofWord={"P"} restOfLettersOfWords='ROYECTOS' />
+        <Skills firstLetterOfWord="H" lastLetterOfWord='ABILIDADES' />
+        
         <Contact firstLetterOfWord="C" lastLettersOfWord="ONTACTO" consulta="Información sobre.." asunto="Hola, Facundo me gustaría obtener información sobre..." github="Mi perfil de Github" linkedin="Mi perfil de Linkedin" />
       </main>
     </div>
