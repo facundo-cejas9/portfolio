@@ -1,5 +1,16 @@
 ---
+interface Props {
+  firstLetterOfFirstWord: string;
+  restOfLettersAtFirstWord: string;
+  firstLetterOfLastWord: string;
+  restOfLettersAtLastWord: string;
+  firstParagraph: string;
+  secondParagraph: string;
+  buttonText: string
 
+}
+
+const { firstLetterOfFirstWord, restOfLettersAtFirstWord, firstLetterOfLastWord, restOfLettersAtLastWord, firstParagraph, secondParagraph, buttonText } = Astro.props
 ---
 
 <div
@@ -9,7 +20,7 @@
   <h1
     class="text-center text-4xl md:text-6xl font-mono font-light text-white mt-[5rem] lg:mt-0"
   >
-    <span class="text-red-500">S</span>OBRE <span class="text-red-500">M</span>Í
+    <span class="text-red-500">{firstLetterOfFirstWord}</span>{restOfLettersAtFirstWord} <span class="text-red-500">{ firstLetterOfLastWord }</span>{ restOfLettersAtLastWord }
   </h1>
   <div class="flex flex-wrap justify-center flex-col lg:flex-row mt-10">
     <div class="xl:w-2/5 lg:w-full flex justify-center">
@@ -22,20 +33,11 @@
 
     <div class="xl:w-3/5 lg:w-full flex flex-col justify-start mt-10">
       <p class="text-justify text-md mb-10 text-slate-100 leading-7">
-        Mi nombre es Facundo Cejas, tengo 27 años, soy desarrollador frontend con una
-        sólida formación en aplicaciones web y de escritorio. Mi trayectoria
-        profesional se ha forjado a través de un aprendizaje autodidacta y una
-        experiencia práctica en el desarrollo de software. Poseo un sólido
-        conocimiento en JavaScript, React, NextJS y otras herramientas
-        relevantes.
+        { firstParagraph }
       </p>
 
       <p class="text-md text-justify mb-10 text-slate-200 leading-7">
-        Mi Experiencia labroal ha sido principalmente enfocada en el desarrollo
-        individual, sin embargo, he tenido una valiosa experiencia trabajando en
-        equipo durante una aceleración específica. Durante esta etapa, participé
-        en una simulación de proyecto donde trabajamos en equipo durante tres
-        meses en la creación de una aplicación.
+       { secondParagraph }
       </p>
     </div>
   </div>
@@ -45,7 +47,7 @@
       href="https://drive.google.com/uc?export=download&id=1gNTyaN3KtM9-wenY4fUwp2QkwQErO5d_"
       class="w-full xl:w-2/5 py-4 rounded-md cursor-pointer bg-slate-600 text-white hover:bg-gray-200 hover:text-gray-900 transition duration-200 ease-out"
     >
-      Download CV</a
+      { buttonText }</a
     >
   </div>
 </div>

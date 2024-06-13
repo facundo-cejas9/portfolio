@@ -1,33 +1,66 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import About from '../components/About.astro'
-import Skills from '../components/Skills'
-import Projects from "../components/Projects";
-import Contact from '../components/Contact.astro'
+import About from "../components/About.astro";
+import Skills from "../components/Skills";
+import ProjectsEng from "../components/ProjectsEng";
+import Contact from "../components/Contact.astro";
+import Navbar from "../components/Navbar.astro";
 ---
 
-<Layout title="Portfolio Facundo Cejas">
-	<div class="h-auto bg-slate-200 max-w-full">
-		<div class="container mx-auto pt-10 py-20 ">
-			<main>
-				<About />
-				<Skills />
-				<Projects /> 
-				<Contact />
+<Layout language="en" title="Portfolio Facundo Cejas">
+  <Navbar
+    contact="CONTACT"
+    about="ABOUT ME"
+    skills="SKILLS"
+    projects="PROYECTS"
+    page="/es"
+    language={"ES"}
+    flag={"espana"}
+  />
+  <div class="h-auto bg-slate-200 max-w-full">
+    <div class="container mx-auto pt-10 py-20">
+      <main>
+        <About
+          firstLetterOfFirstWord="A"
+          restOfLettersAtFirstWord="BOUT"
+          firstLetterOfLastWord="M"
+          restOfLettersAtLastWord="E"
+          firstParagraph="My name is Facundo Cejas, I am 27 years old, I am a frontend developer with a solid background in web and desktop applications. My professional career has been forged through self-taught learning and hands-on experience in software development. I have a solid knowledge of JavaScript, React, NextJS and other relevant tools."
+          secondParagraph="My work experience has been mainly focused on individual development, however, I have had valuable experience working in a team during a specific acceleration. During this stage, I participated in a project simulation where we worked as a team for three months on the creation of an application."
+          buttonText="DOWNLOAD MY CV"
+        />
+        <Skills firstLetterofWord="A" lastLetterOfWord="BILITIES" />
+        <ProjectsEng firstLetterofWord="P" restOfLettersOfWords="ROYECTS" />
+        <Contact
+          firstLetterOfWord="C"
+          lastLettersOfWord="ONTACT"
+          consulta="Information Request About"
+          asunto="Hi, Facundo"
+          github="My github profile"
+          linkedin="My linkedin profile"
+        />
+      </main>
+    </div>
+  </div>
 
-			</main>
-		</div>
-	</div>
-
-	<footer class="bg-gray-900 text-white body-font">
-		<div class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col">
-		  <a class="flex title-font font-medium items-center md:justify-start justify-center text-white">
-			<span class="ml-3 text-xl">Facundo Cejas</span>
-		  </a>
-		  <p class="text-sm sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-700 sm:py-2 sm:mt-0 mt-4">Todos los derechos reservados © 2024</p>
-		  <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-			
-		  </span>
-		</div>
-	  </footer>
+  <footer class="bg-gray-900 text-white body-font">
+    <div
+      class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+    >
+      <a
+        class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+      >
+        <span class="ml-3 text-xl">Facundo Cejas</span>
+      </a>
+      <p
+        class="text-sm sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-700 sm:py-2 sm:mt-0 mt-4"
+      >
+        All rights reserved © 2024
+      </p>
+      <span
+        class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+      >
+      </span>
+    </div>
+  </footer>
 </Layout>

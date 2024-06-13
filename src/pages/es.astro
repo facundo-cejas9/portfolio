@@ -1,0 +1,59 @@
+---
+import Layout from "../layouts/Layout.astro";
+import About from "../components/About.astro";
+import Skills from "../components/Skills";
+import Projects from "../components/Projects";
+import Contact from "../components/Contact.astro";
+import Navbar from "../components/Navbar.astro";
+---
+
+<Layout language="es" title="Portfolio Facundo Cejas">
+  <Navbar
+    contact="CONTACTO"
+    about="SOBRE MÍ"
+    skills="HABILIDADES"
+    projects="PROYECTOS"
+    page="/"
+    language={"ENG"}
+    flag="ingles"
+  />
+  <div class="h-auto bg-slate-200 max-w-full">
+    <div class="container mx-auto pt-10 py-20">
+      <main>
+        <About
+          firstLetterOfFirstWord="S"
+          restOfLettersAtFirstWord="OBRE"
+          firstLetterOfLastWord="M"
+          restOfLettersAtLastWord="Í"
+          firstParagraph="Mi nombre es Facundo Cejas, tengo 27 años, soy desarrollador frontend con una sólida formación en aplicaciones web y de escritorio. Mi trayectoria profesional se ha forjado a través de un aprendizaje autodidacta y una experiencia práctica en el desarrollo de software. Poseo un sólido conocimiento en JavaScript, React, NextJS y otras herramientas relevantes."
+          secondParagraph="Mi Experiencia labroal ha sido principalmente enfocada en el desarrollo individual, sin embargo, he tenido una valiosa experiencia trabajando en equipo durante una aceleración específica. Durante esta etapa, participé en una simulación de proyecto donde trabajamos en equipo durante tres meses en la creación de una aplicación.."
+          buttonText="DESCARGAR MI CV"
+        />
+        <Skills firstLetterofWord="H" lastLetterOfWord='ABILIDADES' />
+        <Projects firstLetterofWord={"P"} restOfLettersOfWords='ROYECTOS' />
+        <Contact firstLetterOfWord="C" lastLettersOfWord="ONTACTO" consulta="Información sobre.." asunto="Hola, Facundo me gustaría obtener información sobre..." github="Mi perfil de Github" linkedin="Mi perfil de Linkedin" />
+      </main>
+    </div>
+  </div>
+
+  <footer class="bg-gray-900 text-white body-font">
+    <div
+      class="container px-5 py-8 mx-auto flex items-center sm:flex-row flex-col"
+    >
+      <a
+        class="flex title-font font-medium items-center md:justify-start justify-center text-white"
+      >
+        <span class="ml-3 text-xl">Facundo Cejas</span>
+      </a>
+      <p
+        class="text-sm sm:ml-4 sm:pl-4 sm:border-l sm:border-gray-700 sm:py-2 sm:mt-0 mt-4"
+      >
+        Todos los derechos reservados © 2024
+      </p>
+      <span
+        class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start"
+      >
+      </span>
+    </div>
+  </footer>
+</Layout>

@@ -1,9 +1,9 @@
 import React from 'react'
-import { ProjectsDataEs } from '../data/data'
+import { ProjectsDataEng } from '../data/data'
 
-const Projects = ({ firstLetterofWord, restOfLettersOfWords }) => {
+const ProjectsEng = ({ firstLetterofWord, restOfLettersOfWords }) => {
 
-  const { projects } = ProjectsDataEs[0]
+  const { projects } = ProjectsDataEng[0]
 
 
   return (
@@ -57,4 +57,4 @@ const Projects = ({ firstLetterofWord, restOfLettersOfWords }) => {
   )
 }
 
-export default Projects
+export default ProjectsEng

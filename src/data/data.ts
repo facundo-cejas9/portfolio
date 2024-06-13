@@ -66,7 +66,7 @@ export const SkillsData = [
 ];
 
 
-export const ProjectsData = [
+export const ProjectsDataEs = [
     {
         projects: [
 
@@ -97,6 +97,48 @@ export const ProjectsData = [
             {
                 name: "Aplicación de comidas",
                 description: "Proyecto Full stack, utilizando MERN. Cuenta con un sistema de inicio de sesión, como así también la posibilidad de que el usuario pueda crearse una cuenta, permite un seguimiento de su pedido, como así ver sus ordenes. La aplicación tiene un panel de admin, el cual permite agregar o eliminar más comidas al backend. Para los métodos de pago utilicé Stripe.",
+                image: "/images/comida.png",
+                link: "https://www.youtube.com/watch?v=vU4XzeodzG0",
+                github: "https://github.com/facundo-cejas9/comidasApp",
+            },
+
+           
+        ]
+    }
+]
+
+
+export const ProjectsDataEng = [
+    {
+        projects: [
+
+            {
+                name: "Netflix Clone",
+                description: "Personal project, Netflix clone created with ReactJS for the frontend, firebase for the backend, and pure css for the styles. The application has a login system and if the user does not have an account, one can be created.",
+                image: "/images/netflix.png",
+                link: "https://projectnetfilx.netlify.app/",
+                github: "https://github.com/facundo-cejas9/netflixClone",
+            },
+
+            {
+                name: "AlkyBank",
+                description: "Project carried out in the Alkemy acceleration of ReactJS, which consisted of putting together a dashboard for a simulation of a bank. This included a login page, a registration page, and the ability to make transactions such as sending and receiving money. React, Redux for state management and CSS Modules were implemented.",
+                image: "/images/alkybank.png",
+                link: "https://github.com/facundo-cejas9/alkybank",
+                github: "https://github.com/facundo-cejas9/alkybank",
+            },
+
+            {
+                name: "Journal APP",
+                description: "Application created in React with the course of Fernando Herrera. The app has registration and sign-in capabilities using Firebase as a database. It allows you to create agenda-style notes and reminders, as well as the ability to upload images. React and MaterialUI were used for the styles.",
+                image: "/images/journal.png",
+                link: "https://journalv2.netlify.app/",
+                github: "#",
+            },
+
+            {
+                name: "Food Aplication",
+                description: "Full stack project, using MERN. It has a login system, as well as the possibility for the user to create an account, it allows you to track your order, as well as see your orders. The app has an admin panel, which allows you to add or remove more meals to the backend. For payment methods I used Stripe.",
                 image: "/images/comida.png",
                 link: "https://www.youtube.com/watch?v=vU4XzeodzG0",
                 github: "https://github.com/facundo-cejas9/comidasApp",

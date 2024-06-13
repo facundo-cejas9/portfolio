@@ -1,5 +1,15 @@
 ---
+interface Props {
+  about: string;
+  skills: string;
+  projects: string;
+  contact: string;
+  language: string;
+  page: string;
+  flag: string;
+}
 
+const { about, skills, projects, contact, language, page, flag } = Astro.props;
 ---
 
 <header
@@ -25,60 +35,80 @@
         <li
           class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
         >
-          <a href="#about"> SOBRE MÍ</a>
+          <a href="#about">{about}</a>
         </li>
         <li
           class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
         >
-          <a href="#skills"> HABILIDADES</a>
+          <a href="#skills"> {skills}</a>
         </li>
         <li
           class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
         >
-          <a href="#projects"> PROYECTOS</a>
+          <a href="#projects"> {projects}</a>
         </li>
         <li
           class="block hover:text-red-500 hover:transition duration-300 ease-in-out text-xl font-mono text-white font-semibold"
         >
-          <a href="#contact"> CONTACTAME</a>
+          <a href="#contact"> {contact}</a>
+        </li>
+        <li class="flex items-center justify-center">
+          <a
+            class="link flex flex-row margin-auto gap-3 items-center text-2xl font-mono text-white "
+            href={page}
+          >
+            <img class="w-7 h-7" src=`/images/${flag}.png ` />
+
+            
+          </a>
         </li>
       </ul>
     </nav>
 
-    <div class=" hamburguer">
+    <div class="hamburguer">
       <div class="bar"></div>
     </div>
   </div>
 
   <nav class="mobile bg-gray-900">
-    <ul class="p-4 mt-20  transitio ease-in-out duration-300 mr-20">
+    <ul class="p-4 mt-20 transitio ease-in-out duration-300 mr-20">
       <li>
         <a
           href="#about"
           class="link block margin-auto font-mono text-2xl mb-[4rem] text-center text-white py-2"
-          >SOBRE MÍ</a
+          >{about}</a
         >
       </li>
       <li>
         <a
           href="#skills"
           class="link block font-mono margin-auto text-center mb-[4rem] text-2xl text-white py-2"
-          >HABILIDADES</a
+          >{skills}</a
         >
       </li>
       <li>
         <a
           href="#projects"
           class="link block margin-auto text-center mb-[4rem] text-2xl font-mono text-white py-2"
-          >PROYECTOS</a
+          >{projects}</a
         >
       </li>
       <li>
         <a
           href="#contact"
           class="link block margin-auto text-center mb-[4rem] text-2xl font-mono text-white py-2"
-          >CONTACTO</a
+          >{contact}</a
         >
+      </li>
+
+      <li class="flex items-center justify-center">
+        <a
+          class="gap-5 link items-center flex flex-row margin-auto align-bottom mb-[4rem] text-2xl font-mono text-white py-2"
+          href={page}
+        >
+          <img class="w-6 h-6" src={`/images/${flag}.png`} />
+          {language}
+        </a>
       </li>
     </ul>
   </nav>
@@ -95,10 +125,12 @@
     background: none;
     outline: none;
     border: none;
-}
+  }
 
-.hamburguer .bar, .hamburguer:after, .hamburguer:before  {
-    content: '';
+  .hamburguer .bar,
+  .hamburguer:after,
+  .hamburguer:before {
+    content: "";
     display: block;
     width: 100%;
     height: 5px;
@@ -109,31 +141,29 @@
     -moz-transition: 0.4s;
     -ms-transition: 0.4s;
     -o-transition: 0.4s;
-}
+  }
 
-.hamburguer.active:before {
-    transform: rotate(-45deg) translate(-8px, 6px) ;
-    -webkit-transform: rotate(-45deg) translate(-8px, 6px) ;
-    -moz-transform: rotate(-45deg) translate(-8px, 6px) ;
-    -ms-transform: rotate(-45deg) translate(-8px, 6px) ;
-    -o-transform: rotate(-45deg) translate(-8px, 6px) ;
-}
+  .hamburguer.active:before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+    -webkit-transform: rotate(-45deg) translate(-8px, 6px);
+    -moz-transform: rotate(-45deg) translate(-8px, 6px);
+    -ms-transform: rotate(-45deg) translate(-8px, 6px);
+    -o-transform: rotate(-45deg) translate(-8px, 6px);
+  }
 
-.hamburguer.active:after {
-    transform: rotate(45deg) translate(-9px, -8px) ;
-    -webkit-transform: rotate(45deg) translate(-9px, -8px) ;
-    -moz-transform: rotate(45deg) translate(-9px, -8px) ;
-    -ms-transform: rotate(45deg) translate(-9px, -8px) ;
-    -o-transform: rotate(45deg) translate(-9px, -8px) ;
-}
+  .hamburguer.active:after {
+    transform: rotate(45deg) translate(-9px, -8px);
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    -moz-transform: rotate(45deg) translate(-9px, -8px);
+    -ms-transform: rotate(45deg) translate(-9px, -8px);
+    -o-transform: rotate(45deg) translate(-9px, -8px);
+  }
 
-.hamburguer.active .bar {
+  .hamburguer.active .bar {
     opacity: 0;
-}
+  }
 
-
-.mobile {
-    
+  .mobile {
     position: fixed;
     top: 0;
     left: 100%;
@@ -147,32 +177,32 @@
     -moz-transition: 0.4s;
     -ms-transition: 0.4s;
     -o-transition: 0.4s;
-}
-
-.mobile.is-active {
-    left: 20%
-}
-
-@media (min-width: 1024px) {
-    .hamburguer {
-        display: none;
-    }
-}
-
-/* Animación para el efecto de máquina de escribir */
-@keyframes typing {
-    from { width: 0 }
-    to { width: 100% }
   }
-  
-  
+
+  .mobile.is-active {
+    left: 20%;
+  }
+
+  @media (min-width: 1024px) {
+    .hamburguer {
+      display: none;
+    }
+  }
+
+  /* Animación para el efecto de máquina de escribir */
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
 </style>
 
 <script>
- 
-
-const hamburgerMenu = document.querySelector(".hamburguer");
-const mobile = document.querySelector(".mobile");
+  const hamburgerMenu = document.querySelector(".hamburguer");
+  const mobile = document.querySelector(".mobile");
   const closeMenuWithLinks = document.querySelectorAll(".link");
 
   closeMenuWithLinks.forEach((link) => {
@@ -182,7 +212,6 @@ const mobile = document.querySelector(".mobile");
     });
   });
 
- 
   hamburgerMenu.addEventListener("click", function (event: any) {
     hamburgerMenu.classList.toggle("active");
     mobile.classList.toggle("is-active");
