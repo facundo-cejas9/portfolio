@@ -74,7 +74,7 @@ export const ProjectsDataEs = [
                 name: "Clon de Netflix",
                 description: "Proyecto personal, clon de Netflix creado con ReactJS para el frontend, firebase para el backend y css puro para los estilos. La aplicación cuenta con un sistema de inicio de sesión y si el ususario no tiene cuenta, se puede crear una.",
                 image: "/images/netflix.webp",
-                link: "https://projectnetfilx.netlify.app/",
+                link: "https://netflixclone-seven-orpin.vercel.app/",
                 github: "https://github.com/facundo-cejas9/netflixClone",
             },
 
@@ -116,7 +116,7 @@ export const ProjectsDataEng = [
                 name: "Netflix Clone",
                 description: "Personal project, Netflix clone created with ReactJS for the frontend, firebase for the backend, and pure css for the styles. The application has a login system and if the user does not have an account, one can be created.",
                 image: "/images/netflix.webp",
-                link: "https://projectnetfilx.netlify.app/",
+                link: "https://netflixclone-seven-orpin.vercel.app/",
                 github: "https://github.com/facundo-cejas9/netflixClone",
             },
 
