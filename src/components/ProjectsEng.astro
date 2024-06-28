@@ -16,7 +16,7 @@ import { ProjectsDataEng } from '../data/data'
       <span class='text-red-500'>{ firstLetterofWord }</span><span class='text-white'>{ restOfLettersOfWords }</span>
     </h1>
 
-    <div class="container mx-auto grid grid-cols-1  xl:grid-cols-2 gap-20 mt-20 ">
+    <div class="container mx-auto grid grid-cols-1 xl:grid-cols-2 gap-20 mt-20 ">
       {projects.map(project => (
         <div class="flex flex-col items-center gap-1 bg-slate-600 rounded-2xl  p-10">
 
@@ -26,7 +26,7 @@ import { ProjectsDataEng } from '../data/data'
 
           <div class='flex flex-col items-center flex-grow'>
             <img class="flex justify-center items-center w-full lg:w-[35rem] h-full lg:h-[18rem]  rounded-xl" alt={ project.name } src={project.image} />
-            <p class='text-justify text-md text-white font-thin mt-5 justify-center'> {project.description} </p>
+            <p class='text-justify text-xs md:text-base text-white font-thin mt-5 justify-center'> {project.description} </p>
           </div>
 
           <div class='flex w-full flex-col xl:flex-row gap-5 xl:gap-10 justify-center mt-5  p-8'>
