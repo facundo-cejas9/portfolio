@@ -98,7 +98,7 @@ export const ProjectsDataEs = [
                 name: "Aplicación de comidas",
                 description: "Proyecto Full stack, utilizando MERN. Cuenta con un sistema de inicio de sesión, como así también la posibilidad de que el usuario pueda crearse una cuenta, permite un seguimiento de su pedido, como así ver sus ordenes. La aplicación tiene un panel de admin, el cual permite agregar o eliminar más comidas al backend. Para los métodos de pago utilicé Stripe.",
                 image: "/images/comida.webp",
-                link: "https://www.youtube.com/watch?v=vU4XzeodzG0",
+                link: "https://youtu.be/AomlcoXEZHw",
                 github: "https://github.com/facundo-cejas9/comidasApp",
             },
 
@@ -140,7 +140,7 @@ export const ProjectsDataEng = [
                 name: "Food Aplication",
                 description: "Full stack project, using MERN. It has a login system, as well as the possibility for the user to create an account, it allows you to track your order, as well as see your orders. The app has an admin panel, which allows you to add or remove more meals to the backend. For payment methods I used Stripe.",
                 image: "/images/comida.webp",
-                link: "https://www.youtube.com/watch?v=vU4XzeodzG0",
+                link: "https://youtu.be/AomlcoXEZHw",
                 github: "https://github.com/facundo-cejas9/comidasApp",
             },
 
